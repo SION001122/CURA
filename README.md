@@ -163,4 +163,4 @@ https://rowanzellers.com/hellaswag/
 
 
 
-## LINCENSE_LIST
+## LICENSE_LIST
