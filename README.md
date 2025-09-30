@@ -53,7 +53,6 @@ Most tasks in this repository are configured to automatically download the requi
 
 - For the **FallAllD** dataset,  
   please refer to the **"Dataset: FallAllD"** section in this README.  
-  A Google Drive link is provided there to access the `.csv` file directly.(https://drive.google.com/file/d/1gBJBu8ZEZ7TN4mAcG32snxcv7psfqzZ4/view?usp=drive_link)
   
 ---
 
