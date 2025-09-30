@@ -1,5 +1,5 @@
 # CURA
-
+arxiv : https://arxiv.org/abs/2509.24601
 [CURA GitHub Repository](https://github.com/SION001122/CURA)
 
 CURA_CORE <--- NOMAL_TASK
