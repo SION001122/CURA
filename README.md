@@ -1,5 +1,6 @@
 # CURA
-arxiv : https://arxiv.org/abs/2509.24601
+> Academic Use Only | Commercial use prohibited without license  
+> Must cite: Seo et al., 2025 (arXiv:2509.24601)
 [CURA GitHub Repository](https://github.com/SION001122/CURA)
 
 CURA_CORE <--- NOMAL_TASK
