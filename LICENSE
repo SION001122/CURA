@@ -31,9 +31,21 @@ Permission is hereby granted, free of charge, to any individual researcher, stud
 5. No Warranty
    The Software is provided "as is", without warranty of any kind.
 
+6. Mandatory Citation
+   Any use of the Software (including derivatives, publications, benchmarks, or redistributed models) 
+   must prominently include a citation to the following paper:
+
+   Jae-Bum Seo, Muhammad Salman, Lismer Andres Caceres-Najarro, 
+   “CURA: Size Isn’t All You Need – A Compact Universal Architecture for On-Device Intelligence”, 
+   arXiv:2509.24601, 2025. https://arxiv.org/abs/2509.24601
+
+   The citation must appear clearly in academic papers, technical reports, model cards, or any 
+   redistributed artifacts utilizing the Software. Failure to provide such citation constitutes a 
+   violation of this License.
+
 Use of the Software within any organization or institution with a registered business ID, regardless of public or private nature, is prohibited without explicit licensing — even for internal experimentation or evaluation.
 The proposed architecture is patent-pending (KIPO Application No. 10-2025-0045783).
 By using this software, you agree to these terms.
 
 
-📩 For commercial licensing, please contact: sion@curalicense.org
+For commercial licensing, please contact: sion@curalicense.org
