@@ -160,7 +160,3 @@ Dataset: HellaSwag
 Source: Zellers et al., "HellaSwag: Can a Machine Really Finish Your Sentence?" (2019)  
 License: Apache 2.0  
 https://rowanzellers.com/hellaswag/
-
-
-
-## LICENSE_LIST
