@@ -26,5 +26,14 @@ If you redistribute or host a derivative model (e.g., on Hugging Face), you must
    [https://github.com/SION001122/CURA](https://github.com/SION001122/CURA)
 
 ---
+Citation
+If you use this model, please cite:
+Jae-Bum Seo, Muhammad Salman, Lismer Andres Caceres-Najarro,  
+“CURA: Size Isn’t All You Need – A Compact Universal Architecture for On-Device Intelligence”,  
+arXiv:2509.24601, 2025. https://arxiv.org/abs/2509.24601
+
+
+from transformers import AutoModel
+model = AutoModel.from_pretrained("SION001122/CURAv1_MODEL_NAME")
 
  For commercial licensing, please contact: **sion@curalicense.org**
