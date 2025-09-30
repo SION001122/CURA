@@ -13,6 +13,7 @@ Permission is hereby granted, free of charge, to any individual researcher, stud
 
 2. Commercial Use Prohibited
    - Any commercial use — including but not limited to integration into commercial products, paid services, or internal corporate use — is **strictly prohibited** without explicit written permission from the author.
+   - Evaluation for commercial readiness within corporations is also prohibited.
 
 3. Model Sharing Requirements (e.g., Hugging Face)
    If you publicly share a derivative model based on CURA (such as an LLM), you must:
@@ -26,7 +27,7 @@ Permission is hereby granted, free of charge, to any individual researcher, stud
 
 4. Attribution
    All derivative works must include attribution to the original author.
-
+   This work is based on CURA architecture (Seo et al., 2025).
 
 5. No Warranty
    The Software is provided "as is", without warranty of any kind.
