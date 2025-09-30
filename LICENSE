@@ -12,8 +12,8 @@ Permission is hereby granted, free of charge, to any individual researcher, stud
      - Public model sharing on platforms such as Hugging Face, provided all terms herein are followed.
 
 2. Commercial Use Prohibited
-   - Any commercial use — including but not limited to integration into commercial products, paid services, or internal corporate use — is **strictly prohibited** without explicit written permission from the author.
-   - Evaluation for commercial readiness within corporations is also prohibited.
+   - Any commercial use — including but not limited to integration into commercial products, paid services, or commercialization of derivative models — is strictly prohibited without explicit written permission from the author.
+However, non-commercial research, academic collaborations, or internal evaluations for research purposes within corporations are permitted, provided that the results are not used for commercial deployment without licensing.
 
 3. Model Sharing Requirements (e.g., Hugging Face)
    If you publicly share a derivative model based on CURA (such as an LLM), you must:
@@ -44,9 +44,7 @@ Permission is hereby granted, free of charge, to any individual researcher, stud
    redistributed artifacts utilizing the Software. Failure to provide such citation constitutes a 
    violation of this License.
 
-Use of the Software within any organization or institution with a registered business ID, regardless of public or private nature, is prohibited without explicit licensing — even for internal experimentation or evaluation.
-The proposed architecture is patent-pending (KIPO Application No. 10-2025-0045783).
-By using this software, you agree to these terms.
-
+Use of the Software within any organization or institution with a registered business ID is permitted only for non-commercial research, academic publications, and internal evaluation.
+Any transition to commercial use, product development, or deployment requires an explicit commercial license from the author.
 
 For commercial licensing, please contact: sion@curalicense.org
