@@ -1,0 +1,39 @@
+CURA License – NonCommercial Academic Use Only
+Version 1.1 – 2025
+
+Copyright (c) 2025 SION
+
+Permission is hereby granted, free of charge, to any individual researcher, student, or academic institution to use, modify, and distribute this software and its derivatives (the “Software”) for **non-commercial, academic, and educational purposes only**, subject to the following terms:
+
+1. Permitted Use
+   - The Software may be used for:
+     - Research and publication
+     - Teaching and educational coursework
+     - Public model sharing on platforms such as Hugging Face, provided all terms herein are followed.
+
+2. Commercial Use Prohibited
+   - Any commercial use — including but not limited to integration into commercial products, paid services, or internal corporate use — is **strictly prohibited** without explicit written permission from the author.
+
+3. Model Sharing Requirements (e.g., Hugging Face)
+   If you publicly share a derivative model based on CURA (such as an LLM), you must:
+   - Tag the license as: `license: other` or `license: custom`
+   - Clearly state:  
+     - `commercial_use: False`  
+     - `fine_tune_allowed: True`  
+     - `redistribute: True`
+   - Include a visible link to the official CURA GitHub repository:
+     - https://github.com/SION001122/CURA
+
+4. Attribution
+   All derivative works must include attribution to the original author.
+
+
+5. No Warranty
+   The Software is provided "as is", without warranty of any kind.
+
+Use of the Software within any organization or institution with a registered business ID, regardless of public or private nature, is prohibited without explicit licensing — even for internal experimentation or evaluation.
+The proposed architecture is patent-pending (KIPO Application No. 10-2025-0045783).
+By using this software, you agree to these terms.
+
+
+📩 For commercial licensing, please contact: sion@curalicense.org
