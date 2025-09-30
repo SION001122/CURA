@@ -131,9 +131,6 @@ Dataset Source:
 Majd Saleh, Régine Le Bouquin Jeannès, “FallAllD: An Open Dataset of Human Falls and Activities of Daily Living,”  
 IEEE Sensors Journal. DOI: [10.1109/JSEN.2020.3018335](https://doi.org/10.1109/JSEN.2020.3018335)
 
- Dataset (FALLALLD FALL):  (This email address was used during the experiments.dataset)
-[Download from Google Drive](https://drive.google.com/file/d/1s_wedS1XbbnI9JOpdFMkNxQfLETYlo4r/view?usp=sharing]link
-
 ## Dataset: AG News  
 Dataset: AG News  
 Source: Zhang et al., "Character-level Convolutional Networks for Text Classification" (2015)  
