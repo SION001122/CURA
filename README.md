@@ -5,7 +5,7 @@
 
 [CURA GitHub Repository](https://github.com/SION001122/CURA)
 
-CURA_CORE_V1 <--- NOMAL_TASK
+CURA_CORE <--- NOMAL_TASK
 
 
 Referenced as V2 in upcoming publication
