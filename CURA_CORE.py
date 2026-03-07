@@ -2,7 +2,7 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 
-class CURA_CORE(nn.Module):
+class CURA_CORE_V1(nn.Module):
     def __init__(self, input_dim, hidden_dim, output_dim):
         super().__init__()
         # 게이트 회로: R (저항)처럼 입력 신호의 흐름을 조절
