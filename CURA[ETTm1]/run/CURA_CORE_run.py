@@ -34,7 +34,7 @@ base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 csv_path = os.path.join(base_dir,"run", "data", "ETT-small", "ETTm1.csv")
 
-train_loader, val_loader, test_loader, mean, std = load_ettdataset(
+train_loader, val_loader, mean, std = load_ettdataset(
     csv_path,
     seq_len, pred_len, batch_size=64, feature_type="s", target="OT"
 )
@@ -135,14 +135,9 @@ for epoch in range(100):
         break
 
 
-model.load_state_dict(best_model_state_CURA)
-test_loss, test_mae, test_r2, test_mse, all_targets, all_preds = evaluate(test_loader, mean, std)
+
 
 print("\n========== Final Results ==========")
 print(f"Best Val R²: {best_val_r2_CURA:.4f} at Epoch {best_epoch_CURA}")
 print(f"Best Val MAE: {best_val_mae_CURA:.4f} at Epoch {best_epoch_CURA}")
 print(f"Best Val MSE: {best_val_mse_CURA:.4f} at Epoch {best_epoch_CURA}")
-print(f"Test R²: {test_r2:.4f}")
-print(f"Test MAE: {test_mae:.4f}")
-print(f"Test MSE: {test_mse:.4f}")
-print(f"Total parameters: {best_model_params_CURA}")
