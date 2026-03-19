@@ -60,12 +60,10 @@ def load_ettdataset(
 
     train_scaled = standardize(train_data)
     val_scaled   = standardize(val_data)
-    test_scaled  = standardize(test_data)
 
 
     x_train, y_train = create_sequences(train_scaled, seq_len, pred_len, target_slice)
     x_val, y_val     = create_sequences(val_scaled, seq_len, pred_len, target_slice)
-    x_test, y_test   = create_sequences(test_scaled, seq_len, pred_len, target_slice)
 
     train_loader = DataLoader(
         TensorDataset(torch.from_numpy(x_train), torch.from_numpy(y_train)),
@@ -75,9 +73,6 @@ def load_ettdataset(
         TensorDataset(torch.from_numpy(x_val), torch.from_numpy(y_val)),
         batch_size=batch_size, shuffle=False, drop_last=False
     )
-    test_loader = DataLoader(
-        TensorDataset(torch.from_numpy(x_test), torch.from_numpy(y_test)),
-        batch_size=batch_size, shuffle=False, drop_last=False
-    )
 
-    return train_loader, val_loader, test_loader, mean, std
+
+    return train_loader, val_loader, mean, std
