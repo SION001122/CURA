@@ -48,7 +48,7 @@ model = CURA_CORE(
 print(f"Model: {model.__class__.__name__}, Total params: {sum(p.numel() for p in model.parameters())}")
 
 criterion = nn.MSELoss()
-optimizer = optim.Adam(model.parameters(), lr=0.005)
+optimizer = optim.Adam(model.parameters(), lr=0.001)
 scheduler = torch.optim.lr_scheduler.StepLR(optimizer, step_size=20, gamma=0.5)
 
 def evaluate(loader, mean, std):
