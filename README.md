@@ -1,6 +1,6 @@
 # CURA_CORE_V1
 > Academic Use Only | Commercial use prohibited without license  
-> Must cite: Seo et al., 2025 (arXiv:2509.24601)
+> Must cite: DOI: 10.1109/TCE.2026.3703044
 
 
 [CURA GitHub Repository](https://github.com/SION001122/CURA)
