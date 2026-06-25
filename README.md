@@ -1,7 +1,7 @@
 # CURA_CORE_V1
 > Academic Use Only | Commercial use prohibited without license  
 > Must cite: DOI: 10.1109/TCE.2026.3703044
-[CURA](https://ieeexplore.ieee.org/abstract/document/11560974)
+[CURA: Size Isn’t All You Need – A Compact Underlying Architecture for On-Device Intelligence](https://ieeexplore.ieee.org/abstract/document/11560974)
 
 [CURA GitHub Repository](https://github.com/SION001122/CURA)
 
