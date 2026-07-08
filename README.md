@@ -7,6 +7,9 @@
 
 CURA_CORE <--- NOMAL_TASK
 
+The total parameter count may vary slightly (e.g., 3.xM to 4.xM) depending on the PyTorch library version and environment setup. However, the core model architecture and behavior remain identical.
+
+사용하시는 PyTorch 라이브러리 버전 및 환경에 따라 전체 파라미터 수 계산이 약간의 차이(3.xM ~ 4.xM)를 보일 수 있습니다. 이는 라이브러리 내부 구현 차이로 인한 것이며, 모델의 핵심 구조와 동작은 동일합니다.
 
 Referenced as V2 in upcoming publication
 ---
