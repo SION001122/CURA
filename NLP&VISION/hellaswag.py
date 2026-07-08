@@ -52,32 +52,46 @@ train_dataset = HellaSwagDataset(dataset["train"], tokenizer)
 val_dataset = HellaSwagDataset(dataset["validation"], tokenizer)
 
 class CURAsformerBlock(nn.Module):
-    def __init__(self, dim, hidden_dim, num_heads=4, dropout=0.1):
-        super().__init__()
-        self.attn = nn.MultiheadAttention(embed_dim=dim, num_heads=num_heads, dropout=dropout, batch_first=True)
-        self.attn_norm = nn.LayerNorm(dim)
-        
-        self.gate_fc = nn.Linear(dim, hidden_dim)
-        self.residual_fc = nn.Linear(dim, hidden_dim)
-        self.relu_linear = nn.Linear(hidden_dim, hidden_dim)
-        self.conv = nn.Conv1d(hidden_dim, hidden_dim, kernel_size=3, padding=1)
-        self.ffn_out = nn.Linear(hidden_dim, dim)
-        self.ffn_norm = nn.LayerNorm(dim)
-        self.dropout = nn.Dropout(dropout)
-        
-    def forward(self, x):
-        attn_output, _ = self.attn(x, x, x)
-        x = self.attn_norm(x + self.dropout(attn_output))
+        def __init__(self, dim, hidden_dim, num_heads=4, dropout=0.1):
+            super().__init__()
+            self.attn = nn.MultiheadAttention(
+                embed_dim=dim,
+                num_heads=num_heads,
+                dropout=dropout,
+                batch_first=True
+            )
+            self.attn_norm = nn.LayerNorm(dim)
 
-        gate = torch.sigmoid(self.gate_fc(x))
-        residual = self.residual_fc(x)
-        x_ffn = gate * residual + residual
-        x_ffn = F.relu(self.relu_linear(x_ffn))
-        x_ffn = self.conv(x_ffn.transpose(1, 2)).transpose(1, 2)
-        x_ffn = self.ffn_out(x_ffn)
+            self.gate_fc = nn.Linear(dim, hidden_dim)
+            self.residual_fc = nn.Linear(dim, hidden_dim)
+            self.relu_linear = nn.Linear(hidden_dim, hidden_dim)
+            self.conv = nn.Conv1d(
+                in_channels=1,
+                out_channels=1,
+                kernel_size=3,
+                padding=1
+            )
+            self.ffn_out = nn.Linear(hidden_dim, dim)
+            self.dropout = nn.Dropout(dropout)
 
-        x = self.ffn_norm(x + self.dropout(x_ffn))
-        return x
+        def forward(self, x):
+            attn_output, _ = self.attn(x, x, x)
+            x = self.attn_norm(x + self.dropout(attn_output))
+
+
+            gate = torch.sigmoid(self.gate_fc(x))
+            residual = self.residual_fc(x)
+            x_ffn = gate * residual + residual
+            x_ffn = F.relu(self.relu_linear(x_ffn))
+            B, L, H = x_ffn.shape
+            x_ffn = x_ffn.reshape(B * L, 1, H)
+            x_ffn = self.conv(x_ffn)
+            x_ffn = x_ffn.reshape(B, L, H)
+
+            x_ffn = self.ffn_out(x_ffn)
+
+            x = x + self.dropout(x_ffn)
+            return x
 
 class AttentionPooling(nn.Module):
     def __init__(self, dim):
