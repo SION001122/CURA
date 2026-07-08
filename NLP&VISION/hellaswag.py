@@ -7,7 +7,7 @@ import torch.nn.functional as F
 from torch.utils.data import Dataset
 import random
 import numpy as np
-SEED = 1024
+SEED = 42
 random.seed(SEED)
 np.random.seed(SEED)
 torch.manual_seed(SEED)
@@ -58,7 +58,8 @@ class CURAsformerBlock(nn.Module):
                 embed_dim=dim,
                 num_heads=num_heads,
                 dropout=dropout,
-                batch_first=True
+                batch_first=True,
+                bias=False
             )
             self.attn_norm = nn.LayerNorm(dim)
 
@@ -94,18 +95,18 @@ class CURAsformerBlock(nn.Module):
             return x
 
 class AttentionPooling(nn.Module):
-    def __init__(self, dim):
-        super().__init__()
-        self.attn = nn.Sequential(
-            nn.Linear(dim, dim),
-            nn.Tanh(),
-            nn.Linear(dim, 1)
-        )
+        def __init__(self, dim):
+            super().__init__()
+            self.attn = nn.Sequential(
+                nn.Linear(dim, 32), 
+                nn.Tanh(),
+                nn.Linear(32, 1)  
+            )
 
-    def forward(self, x):
-        weights = self.attn(x)
-        weights = torch.softmax(weights, dim=1)
-        return (x * weights).sum(dim=1)
+        def forward(self, x):
+            weights = self.attn(x)
+            weights = torch.softmax(weights, dim=1)
+            return (x * weights).sum(dim=1)
 
 class LowRankEmbedding(nn.Module):
     def __init__(self, vocab_size, hidden_dim, rank=32, max_len=128):
