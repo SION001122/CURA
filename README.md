@@ -7,7 +7,6 @@
 
 CURA_CORE <--- NOMAL_TASK
 
-Referenced as V2 in upcoming publication
 ---
 
 ##  License
